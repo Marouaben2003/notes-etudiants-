@@ -5,9 +5,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-
 DB = "notes.db"
-
 
 def init_db():
     with sqlite3.connect(DB) as con:

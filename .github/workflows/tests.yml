@@ -1,0 +1,33 @@
+﻿@'
+name: Tests Python
+
+on:
+  push:
+    branches:
+      - main
+      - feature/modifier-note
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  tests:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Recuperer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer les dependances
+        run: |
+          python -m pip install --upgrade pip
+          pip install flask pytest
+
+      - name: Executer les tests
+        run: python -m pytest -v
+'@ | Set-Content -Encoding utf8 ".github\workflows\tests.yml"

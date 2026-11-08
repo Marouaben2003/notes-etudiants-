@@ -1,4 +1,4 @@
-name: Tests Python
+﻿name: Tests Python
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   tests:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Recuperer le code
@@ -17,7 +17,7 @@ jobs:
       - name: Installer Python
         uses: actions/setup-python@v5
         with:
-          python-version: “3.12”
+          python-version: â€œ3.12â€
 
       - name: Installer les dependances
         run: |

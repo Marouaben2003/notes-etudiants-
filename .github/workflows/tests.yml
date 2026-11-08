@@ -25,3 +25,4 @@ jobs:
 
       - name: Executer les tests
         run: python -m pytest -v
+

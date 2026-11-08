@@ -1,4 +1,4 @@
-﻿@‘
+﻿@'
 name: Tests Python
 
 on:
@@ -21,7 +21,7 @@ jobs:
       - name: Installer Python
         uses: actions/setup-python@v5
         with:
-          python-version: ‘3.12’
+          python-version: "3.12"
 
       - name: Installer les dependances
         run: |
@@ -30,4 +30,4 @@ jobs:
 
       - name: Executer les tests
         run: python -m pytest -v
-‘@ | Set-Content -Encoding utf8 “.github\workflows\tests.yml”
+'@ | Set-Content -Encoding utf8 ".github\workflows\tests.yml"
